@@ -1,0 +1,102 @@
+	ANOTAÇÕES POO 
+				====== AULA 02 (20/02) ======
+https://dontpad.com/poogabrielf
+
+-> Atributos
+	- cor
+	- marca
+	- nível
+------------------
+-> Métodos
+	- Escrever
+	- Recarregar
+---------------------------------------------------------------------------------------
+
+-> Abstração
+	- Versão simplificada de algo, onde apenas elementos relevantes são considerados.
+
+-> Modularização
+	- Obtenção de sistemas decompostos de um conjunto de módulos coesos e fracamente acoplados.
+
+-> Encapsulamento
+-> Herança
+
+---------------------------------------------------------------------------------------------------------------------
+
+-> Objetos
+	- Entidades que interagem entre si, onde cada uma delas desempenha um papel específico.
+
+
+
+-> Classes
+	- Descrevem um conjunto de objetos com as mesmas propriedades (atributos e associações) e o mesmo comportamento
+(operações).
+	- Objetos são instâncias das classes.
+	- Encapsulam operações relativas a esse tipo de Objeto.
+
+
+
+-> Ligações e Associações
+	- Relacionamentos entre objetos e classes (respectivamente).
+
+
+
+-> Herança
+	- Descrevem um conjunto de classes com as mesmas propriedades (atributos e associações) e o mesmo comportamento
+(operações). 
+
+
+
+-> Mensagens e métodos
+	- Forma de comunicação entre objetos.
+
+---------------------------------------------------------------------------------------------------------------------
+				====== AULA 03 (21/02) ======
+
+Exemplo dado em aula:
+
+ret1 = Retangulo()
+---------------------------------------------------------------------------------------------------------------------
+
+Exemplo Classe, Atributo, Método:
+=============================================
+Pessoa ---> Nome da Classe                  -
+=============================================
+Nome: char[25]                              -
+Idade: int                                  -
+Peso: float ---> Atributos                  -
+Altura: float                               -
+=============================================
+getNome(): char[25]                         -
+setNome(nome: char[25]); void  ---> Métodos -
+calmcMC(): void                             -
+=============================================
+
+
+
+Java é uma composição de 4 itens
+
+- Linguagem de programação
+	-> É muito semelhante à linguagem C em sua sintaxe
+	-> É independente de plataforma
+	-> É uma linguagem orientada a objetos
+	-> O código em um arquivo com a extenção .Java
+
+- Um compilador
+	-> Alem da linguagem, possui um compilador (Javac)
+	-> Ao mesmo tempo, é uma linguagem compilada e interpretada
+	-> O compilador recebe um arquivo .Java e gera um arquivo .class
+	-> Este arquivo é binario e "executavel" e é denominado bytecode
+
+- Uma maquina virtual
+	-> Maquina virtual java (JVM)
+	-> É um programa que carrega um arquivo Java compilado (.class) e as executa
+
+- Uma API
+	-> A API é uma coleção de pacotes
+	-> Cada pacote é uma coleção de classes compiladas (.class)
+	-> A API está inclusa no Java Development Kit (JDK) que pode ser baixado no site oficial
+
+
+
+-> Um objeto é uma instância de uma classe

@@ -1,0 +1,1 @@
+# Dado o consumo de uma residência em kWh, qual o preço da energia a ser pago?
