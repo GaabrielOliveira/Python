@@ -1,7 +1,5 @@
 class Cadastro:
     def _init_(self, login, senha):
-        self.__login = None
-        self.__senha = None
         self.login = login
         self.senha = senha
     
@@ -17,7 +15,7 @@ class Cadastro:
     # Setters
     @login.setter
     def login(self, login):
-        if 5 <= len(login) <= 15:
+        if len(login) >=5 and len(login) <= 15:
             self.__login = login
         else:
             print("O login deve conter entre 5 e 15 caracteres!")

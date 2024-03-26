@@ -19,9 +19,6 @@ class Funcionario:
     def salario(self):
         return self.__salario
 
-
-
-
     def registra_hora_trabalhada(self):
         self.__horas_trabalhadas += 1 #incremento de um
 
