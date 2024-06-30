@@ -13,7 +13,7 @@
 # g) Escreva código de teste que instancie objetos de exemplo e demonstre as capacidades da classe.
 # -------------------------------------------------------------------------------------------------------------------------------------------------------
 import math
-class ponto2D:
+class Ponto2D:
     # Contrutor:
     def __init__(self, x = 0.0, y = 0.0):
         self.__x = x
@@ -56,12 +56,12 @@ class ponto2D:
 
 # Clone:
     def clone (self):
-        return ponto2D(self.__x, self.__y)
+        return Ponto2D(self.__x, self.__y)
     
 # Testes:
 def teste():
-    p1 = ponto2D()
-    p2 = ponto2D(3.8 , 4.0)
+    p1 = Ponto2D()
+    p2 = Ponto2D(3.8 , 4.0)
     print(f'p1:{p1}')
     print(f'p2:{p2}')
 

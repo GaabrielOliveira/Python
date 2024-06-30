@@ -9,4 +9,52 @@
 # e) Método que retorna a área do círculo
 # Escreva código de teste que instancie objetos de exemplo e demonstre as capacidades da classe.
 # -------------------------------------------------------------------------------------------------------------------------------------------------------
+from ex2_ponto2d import Ponto2D
+from math import pi
 
+class Circulo:
+    def __init__(self, raio:float , ponto:Ponto2D):
+        self.__raio = raio
+        self.__ponto = ponto
+    
+# Get e Set
+    @property
+    def raio(self):
+        return self.__raio
+    
+    @raio.setter
+    def raio(self):
+        return self.__raio
+    
+# Inflar e Desinflar
+    def inflar(self, value):
+        self__raio = value
+
+    def desinflar(self, value):
+        if value >= self.__raio:
+            print("Erro!")
+            return
+
+        self.__raio -= value
+
+# Mover
+    def mover(self, novo_ponto):
+        if novo_ponto:
+            self.__ponto = novo_ponto
+            return
+
+        self.__ponto = Ponto2D()
+
+# Area
+    def area(self):
+        return self.__raio**2 * pi
+    
+# Teste
+def teste_get_e_set():
+    circulo = Circulo(10, Ponto2D)
+
+    circulo.raio = 45
+    return circulo.raio == 45
+
+def verificacao_ex3():
+    teste_get_e_set()
