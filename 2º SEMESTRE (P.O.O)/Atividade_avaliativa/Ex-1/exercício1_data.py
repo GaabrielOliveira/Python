@@ -1,4 +1,4 @@
-# Exercício 1
+# EXERCÍCIO 1
 # Crie uma classe para representar datas.
 # a) Represente uma data usando três atributos: o dia, o mês, e o ano.
 # b) Sua classe deve ter um construtor que inicializa os três atributos e verifica a validade dos valores fornecidos.
@@ -7,16 +7,18 @@
 # e) Forneça uma operação para avançar a data para o dia seguinte.
 # f) Escreva código de teste que instancie objetos de exemplo e demonstre as capacidades da classe.
 # Garanta que uma instância desta classe sempre esteja em um estado consistente.
+# -------------------------------------------------------------------------------------------------------------------------------------------------------
 
 dia_por_mes = {1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30,
     7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31}
 class Data:
+    # construtor
     def __init__(self, dia : int, mes : int, ano : int):
         self.__dia = dia
         self.__mes = mes
         self.__ano = ano
         if not self.__validar_data:
-            print("Insira uma data válida!🤬")
+            print("Insira uma data válida!")
             return None
 
     # def __validar_data(self):
@@ -39,7 +41,7 @@ class Data:
          
     def prox_dia(self):
         if not self.__validar_data():
-            return "Insira uma data válida!🤬"
+            return "Insira uma data válida!"
         
         ultimo_dia = dia_por_mes[self.__mes] == self.__dia
         ultimo_mes = self.__mes == 12
@@ -86,7 +88,7 @@ class Data:
             
     def __str__(self):
         if not self.__validar_data:
-            return "Insira uma data válida!🤬"
+            return "Insira uma data válida!"
         return f'{self.dia:02}/{self.mes:02}/{self.ano:02}'
 # --------------------------------------------------------------------
 data = Data(31, 3, 2022 )
