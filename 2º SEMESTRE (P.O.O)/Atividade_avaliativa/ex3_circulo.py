@@ -1,6 +1,6 @@
 # EXERCÍCIO 3
 # Escreva em Python uma classe Circulo, que representa um círculo no plano cartesiano. Forneça os seguintes membros de classe:
-# a) Um construtor que receba o raio e um ponto (o centro do círculo). O parâmetro ponto deve ser do tipo Ponto2D criado anteriormente.
+# a) Um construtor que receba o raio e um ponto (o ponto do círculo). O parâmetro ponto deve ser do tipo Ponto2D criado anteriormente.
 # b) Métodos de acesso ao atributo raio do círculo
 # c) Métodos inflar e desinflar, que, respectivamente, aumentam e diminuem o raio do círculo de um dado valor
 # d) Método mover, que recebe um ponto por parâmetro, que:
@@ -13,48 +13,77 @@ from ex2_ponto2d import Ponto2D
 from math import pi
 
 class Circulo:
-    def __init__(self, raio:float , ponto:Ponto2D):
-        self.__raio = raio
-        self.__ponto = ponto
+    def __init__(self, raio, centro):
+        self._raio = raio
+        self._centro = centro
     
 # Get e Set
     @property
     def raio(self):
-        return self.__raio
+        return self._raio
     
     @raio.setter
-    def raio(self):
-        return self.__raio
+    def raio(self, value):
+        self._raio = value
     
 # Inflar e Desinflar
     def inflar(self, value):
-        self__raio = value
+        self._raio = value
 
     def desinflar(self, value):
-        if value >= self.__raio:
+        if value >= self._raio:
             print("Erro!")
             return
 
-        self.__raio -= value
+        self._raio -= value
 
 # Mover
-    def mover(self, novo_ponto):
-        if novo_ponto:
-            self.__ponto = novo_ponto
-            return
-
-        self.__ponto = Ponto2D()
+    def mover(self, novo_centro = None):
+        if novo_centro is None:
+            self._centro = Ponto2D(0.0, 0.0)
+        else:
+            self._centro = novo_centro
 
 # Area
     def area(self):
-        return self.__raio**2 * pi
+        return self._raio**2 * pi
     
-# Teste
+# # Teste
 def teste_get_e_set():
-    circulo = Circulo(10, Ponto2D)
+    # Criando pontos
+    centro1 = Ponto2D(1.0, 1.0)
+    centro2 = Ponto2D(3.0, 4.0)
 
-    circulo.raio = 45
-    return circulo.raio == 45
+    # Criando círculos
+    circulo1 = Circulo(5.0, centro1)
+    circulo2 = Circulo(10.0, centro2)
 
-def verificacao_ex3():
-    teste_get_e_set()
+    # Testando getters e setters
+    print(f"Circulo1: {circulo1}")  # Circulo1: Circulo(raio=5.0, centro=Ponto2D(1.0, 1.0))
+    print(f"Circulo2: {circulo2}")  # Circulo2: Circulo(raio=10.0, centro=Ponto2D(3.0, 4.0))
+
+    circulo1.raio = 7.0
+    print(f"Novo Circulo1: {circulo1}")  # Novo Circulo1: Circulo(raio=7.0, centro=Ponto2D(1.0, 1.0))
+
+    # Testando inflar e desinflar
+    circulo1.inflar(3.0)
+    print(f"Circulo1 inflado: {circulo1}")  # Circulo1 inflado: Circulo(raio=10.0, centro=Ponto2D(1.0, 1.0))
+
+    circulo1.desinflar(2.0)
+    print(f"Circulo1 desinflado: {circulo1}")  # Circulo1 desinflado: Circulo(raio=8.0, centro=Ponto2D(1.0, 1.0))
+
+    # Testando o método mover
+    circulo1.mover()
+    print(f"Circulo1 movido para a origem: {circulo1}")  # Circulo1 movido para a origem: Circulo(raio=8.0, centro=Ponto2D(0.0, 0.0))
+
+    circulo1.mover(Ponto2D(2.0, 2.0))
+    print(f"Circulo1 movido para (2.0, 2.0): {circulo1}")  # Circulo1 movido para (2.0, 2.0): Circulo(raio=8.0, centro=Ponto2D(2.0, 2.0))
+
+    # Testando a área do círculo
+    area_circulo1 = circulo1.area()
+    print(f"Área do Circulo1: {area_circulo1}")  # Área do Circulo1: 201.06192982974676
+
+# def verificacao_ex3():
+teste_get_e_set()
+
+
