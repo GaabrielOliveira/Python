@@ -1,3 +1,5 @@
+# Exercício 2
+
 def cumsum(lista):
     resultado = []
     soma = 0
