@@ -28,13 +28,12 @@ class Circulo:
     
 # Inflar e Desinflar
     def inflar(self, value):
-        self._raio = value
+        self._raio += value
 
     def desinflar(self, value):
-        if value >= self._raio:
+        if value > self._raio:
             print("Erro!")
             return
-
         self._raio -= value
 
 # Mover
@@ -48,6 +47,9 @@ class Circulo:
     def area(self):
         return self._raio**2 * pi
     
+    def __str__(self):
+        return f"raio = {self._raio}, centro = {self._centro}"
+
 # # Teste
 def teste_get_e_set():
     # Criando pontos
@@ -59,29 +61,29 @@ def teste_get_e_set():
     circulo2 = Circulo(10.0, centro2)
 
     # Testando getters e setters
-    print(f"Circulo1: {circulo1}")  # Circulo1: Circulo(raio=5.0, centro=Ponto2D(1.0, 1.0))
-    print(f"Circulo2: {circulo2}")  # Circulo2: Circulo(raio=10.0, centro=Ponto2D(3.0, 4.0))
+    print(f"Circulo 1: {circulo1}")
+    print(f"Circulo 2: {circulo2}")
 
-    circulo1.raio = 7.0
-    print(f"Novo Circulo1: {circulo1}")  # Novo Circulo1: Circulo(raio=7.0, centro=Ponto2D(1.0, 1.0))
+    circulo1.raio = 6.0
+    print(f"Novo Circulo 1: {circulo1}")
 
     # Testando inflar e desinflar
-    circulo1.inflar(3.0)
-    print(f"Circulo1 inflado: {circulo1}")  # Circulo1 inflado: Circulo(raio=10.0, centro=Ponto2D(1.0, 1.0))
+    circulo1.inflar(2)
+    print(f"Circulo 1 inflado: {circulo1}")
 
-    circulo1.desinflar(2.0)
-    print(f"Circulo1 desinflado: {circulo1}")  # Circulo1 desinflado: Circulo(raio=8.0, centro=Ponto2D(1.0, 1.0))
+    circulo1.desinflar(3)
+    print(f"Circulo 1 desinflado: {circulo1}")
 
     # Testando o método mover
     circulo1.mover()
-    print(f"Circulo1 movido para a origem: {circulo1}")  # Circulo1 movido para a origem: Circulo(raio=8.0, centro=Ponto2D(0.0, 0.0))
+    print(f"Circulo 1 movido para a origem: {circulo1}")
 
     circulo1.mover(Ponto2D(2.0, 2.0))
-    print(f"Circulo1 movido para (2.0, 2.0): {circulo1}")  # Circulo1 movido para (2.0, 2.0): Circulo(raio=8.0, centro=Ponto2D(2.0, 2.0))
+    print(f"Circulo 1 movido para (2.0, 2.0): {circulo1}")
 
     # Testando a área do círculo
     area_circulo1 = circulo1.area()
-    print(f"Área do Circulo1: {area_circulo1}")  # Área do Circulo1: 201.06192982974676
+    print(f"Área do Circulo1: {area_circulo1:.2f}")
 
 # def verificacao_ex3():
 teste_get_e_set()

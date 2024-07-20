@@ -46,7 +46,7 @@ class Ponto2D:
     
 # Representação como string:
     def __str__(self):
-        return f'\nX:({self.__x}) \nY:({self.__y})\n'
+        return f'\nX:({self.__x}) Y:({self.__y})\n'
 
 # Calculando os pontos:
     def dist(x2, y2, x1, y1):
@@ -59,19 +59,19 @@ class Ponto2D:
         return Ponto2D(self.__x, self.__y)
     
 # Testes:
-# def teste():
-#     p1 = Ponto2D()
-#     p2 = Ponto2D(3.8 , 4.0)
-#     print(f'p1:{p1}')
-#     print(f'p2:{p2}')
+def teste():
+    p1 = Ponto2D()
+    p2 = Ponto2D(3.8 , 4.0)
+    print(f'p1:{p1}')
+    print(f'p2:{p2}')
 
-#     p1.x = 3.6
-#     p1.y = 1.7
-#     print(f'p1 atualizado: {p1}')
+    p1.x = 3.6
+    p1.y = 1.7
+    print(f'p1 atualizado: {p1}')
 
-#     p2.x = 3.9
-#     p2.y = 2.5
-#     print(f'p2 atualizado: {p2}')
+    p2.x = 3.9
+    p2.y = 2.5
+    print(f'p2 atualizado: {p2}')
 
-# teste()
+teste()
 
