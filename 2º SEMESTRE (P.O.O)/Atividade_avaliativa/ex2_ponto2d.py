@@ -12,6 +12,7 @@
 # f) Método clone, que retorna uma nova instância de um ponto no mesmo local do objeto.
 # g) Escreva código de teste que instancie objetos de exemplo e demonstre as capacidades da classe.
 # -------------------------------------------------------------------------------------------------------------------------------------------------------
+
 import math
 class Ponto2D:
     # Contrutor:

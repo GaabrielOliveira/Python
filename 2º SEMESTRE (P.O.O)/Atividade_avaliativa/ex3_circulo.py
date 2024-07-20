@@ -9,6 +9,7 @@
 # e) Método que retorna a área do círculo
 # Escreva código de teste que instancie objetos de exemplo e demonstre as capacidades da classe.
 # -------------------------------------------------------------------------------------------------------------------------------------------------------
+
 from ex2_ponto2d import Ponto2D
 from math import pi
 
