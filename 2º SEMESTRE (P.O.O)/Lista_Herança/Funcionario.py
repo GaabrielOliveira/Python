@@ -24,16 +24,14 @@ class Gerente(Funcionario):
         return self.salario
 
 # Testes:
-funcionario = Funcionario("Gabriel Felipe", "123.456.789-00", 5000, "Financeiro")
+funcionario = Funcionario("Gabriel Felipe", "032.502.315-31", 5000, "")
 
 gerente = Gerente("Barbara Silva", "987.654.321-00", 8000, "TI", "1123785946", 10)
 
-print(f"Salário de {funcionario.nome} antes da bonificação: R$ {5000}")
-print(f"Salário de {funcionario.nome} após bonificação: R$ {funcionario.bonificar()}")
-
-print(f"Salário de {gerente.nome} antes da bonificação: R$ {8000}")
-print(f"Salário de {gerente.nome} após bonificação: R$ {gerente.bonificar()}")
-
-print(f"Autenticação de senha correta para {gerente.nome}: {gerente.autenticar_senha('1123785946')}")
-print(f"Autenticação de senha incorreta para {gerente.nome}: {gerente.autenticar_senha('senha_errada')}")
+print(f"Salário de {funcionario.nome} sem bonificação: R$ {5000}")
+print(f"Salário de {funcionario.nome} com bonificação: R$ {funcionario.bonificar()}")
+print(f"Salário de {gerente.nome} sem bonificação: R$ {8000}")
+print(f"Salário de {gerente.nome} com bonificação: R$ {gerente.bonificar()}")
+print(f"Senha correta para {gerente.nome}: {gerente.autenticar_senha('1123785946')}")
+print(f"Senha incorreta para {gerente.nome}: {gerente.autenticar_senha('senha_errada')}")
         

@@ -1,5 +1,5 @@
 class ContaBancaria:
-    def __init__(self, nome, saldo=0.0):
+    def __init__(self, nome:str, saldo:float):
         self._nome = nome
         self._saldo = saldo
 
@@ -24,7 +24,7 @@ class ContaBancaria:
 
 
 class ContaCorrente(ContaBancaria):
-    def __init__(self, nome, saldo=0.0, limite_cheque_especial=500.0):
+    def __init__(self, nome:str, saldo:float, limite_cheque_especial:float):
         super().__init__(nome, saldo)
         self._limite_cheque_especial = limite_cheque_especial
 
@@ -43,7 +43,7 @@ class ContaCorrente(ContaBancaria):
 
 
 class ContaPoupanca(ContaBancaria):
-    def __init__(self, nome, saldo=0.0, taxa_juros=0.02):
+    def __init__(self, nome:str, saldo:float, taxa_juros:float):
         super().__init__(nome, saldo)
         self._taxa_juros = taxa_juros
 
@@ -53,14 +53,12 @@ class ContaPoupanca(ContaBancaria):
         print(f"Juros de R$ {juros:.2f} aplicados ao saldo.")
 
 
-conta_corrente = ContaCorrente("João Silva", 1000.0, 300.0)
+conta_corrente = ContaCorrente("Gabriel Oliveira", 1421.4, 300.0)
 conta_corrente.exibir_saldo()
 conta_corrente.sacar(1200)
 conta_corrente.exibir_saldo()
-
 print()
-
-conta_poupanca = ContaPoupanca("Maria Souza", 2000.0, 0.05)
+conta_poupanca = ContaPoupanca("Izabela Santos", 2532.5, 0.05)
 conta_poupanca.exibir_saldo()
 conta_poupanca.aplicar_juros()
 conta_poupanca.exibir_saldo()

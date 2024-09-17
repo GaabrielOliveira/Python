@@ -12,15 +12,15 @@ class Atleta:
 
 class Corredor(Atleta):
     def correr(self):
-        print("Corredor está correndo.")
+        print("Correndo 30km")
 
 class Nadador(Atleta):
     def nadar(self):
-        print("Nadador está nadando.")
+        print("Nadando os 100m rasos")
 
 class Ciclista(Atleta):
     def pedalar(self):
-        print("Ciclista está pedalando.")
+        print("Pedalando 200km")
 
 class TriAtleta(Corredor, Nadador, Ciclista):
     def __init__(self, aposentado, peso):
